@@ -22,7 +22,8 @@ jobs:
           key: ${{secrets.PRIVATE_SSH_KEY}}
           port: 22
           script: |
-            source ~/.bashrc
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
             cd cicd-testing
             git pull origin main
             npm install
